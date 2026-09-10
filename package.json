@@ -1,0 +1,16 @@
+{
+  "name": "kafka-order-pipeline",
+  "version": "1.0.0",
+  "description": "Kafka + Avro order processing pipeline with real-time aggregation, retry logic, and a Dead Letter Queue",
+  "main": "src/consumer.js",
+  "type": "commonjs",
+  "scripts": {
+    "produce": "node src/producer.js",
+    "consume": "node src/consumer.js",
+    "dlq:watch": "node src/dlqWatcher.js"
+  },
+  "dependencies": {
+    "@kafkajs/confluent-schema-registry": "^3.3.0",
+    "kafkajs": "^2.2.4"
+  }
+}
